@@ -8,6 +8,7 @@ public class gerador {
         Scanner sc = new Scanner(System.in);
         int quant, numeroAleatorio;
 
+        // pergunta ao usuarioa a quantidade de caracteres que a senha deve conter
         System.out.print("Quantos caracteres sua senha deve conter? ");
         quant = sc.nextInt();
 
@@ -19,14 +20,17 @@ public class gerador {
                 numeroAleatorio = rand.nextInt(90) + 33;
             } while (caracteresEvitados.contains(numeroAleatorio)); // Verifica se o número gerado está na lista de caracteres evitados
 
+            // convercao do numero aleatorio para caractere na tabela ASCII
             char caractere = (char) numeroAleatorio;
             
+            // armazena o caractere gerado em um vetor
             vet[i] = caractere;
         }
 
         System.out.print("Senha gerada: ");
 
         for (int i = 0; i < quant; i++) {
+            // imprime cada caractere gerado em todas as posicoes do vetor
             System.out.print(vet[i]);
         }
         System.out.println();
