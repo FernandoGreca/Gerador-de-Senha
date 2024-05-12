@@ -8,7 +8,7 @@ public class gerador {
         Scanner sc = new Scanner(System.in);
         int quant, numeroAleatorio;
 
-        System.out.println("Quantos caracteres sua senha deve conter? ");
+        System.out.print("Quantos caracteres sua senha deve conter? ");
         quant = sc.nextInt();
 
         char[] vet = new char[quant];
